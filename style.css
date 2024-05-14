@@ -1,0 +1,352 @@
+:root {
+  --clr-strong-cyan: hsl(171, 66%, 44%);
+  --clr-light-blue: hsl(233, 100%, 69%);
+
+  --clr-dark-grayish-blue: hsl(210, 10%, 33%);
+  --clr-grayish-blue: hsl(201, 11%, 66%);
+
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-400);
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3 {
+  color: var(--clr-dark-grayish-blue);
+}
+h1 {
+  font-size: 2rem;
+  margin-block: 3rem 1rem;
+}
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+h3 {
+  margin-block: 3rem 1rem;
+  font-size: 1.5rem;
+}
+p {
+  line-height: 1.7;
+  font-size: 1.03rem;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+header img {
+  margin-top: -8rem;
+}
+.btn-container {
+  margin-block: 1rem 10rem;
+  display: flex;
+  flex-direction: column;
+}
+button {
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 100px;
+  border-bottom: 4px solid;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.3rem;
+}
+.ios {
+  background-color: var(--clr-strong-cyan);
+  border-color: hsl(171, 66%, 36%);
+  box-shadow: 0px 10px 30px -5px hsla(171, 66%, 36%, 0.5);
+}
+.mac {
+  background-color: var(--clr-light-blue);
+  border-color: hsl(233, 100%, 65%);
+  box-shadow: 0px 10px 30px -5px hsla(233, 100%, 65%, 0.5);
+}
+button:hover {
+  opacity: 0.6;
+}
+.snippets p {
+  width: 85%;
+  margin: 0 auto;
+}
+.snippets-left img {
+  margin-block: 4rem 0.5rem;
+  width: 85%;
+}
+.access-clipboard {
+  margin-block: 10rem 2rem;
+}
+.access-clipboard img {
+  margin-block: 4rem 4rem;
+}
+.workflow-cols {
+  display: grid;
+  gap: 3.5rem;
+  margin-bottom: 10rem;
+}
+.col-1 {
+  margin-top: 5rem;
+}
+.logo-container {
+  display: grid;
+  gap: 5rem;
+}
+.logo-container > * {
+  width: 40%;
+  margin: 0 auto;
+}
+.logo-container:last-child {
+  margin-bottom: 10rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.links-1,
+.links-2,
+.links-3 {
+  display: flex;
+  flex-direction: column;
+}
+footer .logo {
+  width: 15%;
+  margin: 0 auto 1.5rem auto;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-grayish-blue);
+  margin-bottom: 1.5rem;
+  font-weight: var(--fw-600);
+  cursor: pointer;
+}
+a:hover {
+  color: var(--clr-strong-cyan);
+}
+.twitter-container {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.twitter,
+.twitter-cyan {
+  position: absolute;
+}
+.twitter {
+  visibility: visible;
+}
+.twitter-cyan {
+  visibility: hidden;
+}
+.hide {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+.media-logos {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0 auto;
+}
+.media-logos > * {
+  cursor: pointer;
+}
+
+@media (min-width: 568px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .btn-container {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  button {
+    padding-inline: 2.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  .header-content p {
+    /*margin-inline: 1rem;*/
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .workflow-cols {
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    margin-top: 5rem;
+    gap: 2rem;
+    justify-content: start;
+  }
+
+  .workflow-cols img {
+    height: 3rem; /*otherwise the blacklist is taller than the 
+    others and this affects the type below as in it does not 
+    line up with the others*/
+  }
+
+  .workflow-cols p {
+    font-size: 1.1rem;
+  }
+  .col-1 {
+    margin-top: 0;
+  }
+  .logo-container {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+  .logo-container > * {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .access-clipboard p {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .clipboard p {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .snippets p {
+    width: 58%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 767px) {
+  body {
+    max-width: 768px;
+  }
+  .snippets-content {
+    width: 85% !important;
+    margin: 0 auto;
+  }
+  .snippets-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .snippets-left {
+    overflow: hidden;
+    width: 65%;
+  }
+  .snippets-left img {
+    /*this is to crop the image on the left*/
+    display: block;
+    width: 85%;
+    height: auto;
+    transform: translateX(-5%);
+    margin-block: 0;
+  }
+  .snippets-right {
+    text-align: left;
+    width: 50%;
+    margin: 0 0 0 -3rem;
+  }
+  .snippets-right h3 {
+    margin-bottom: 0.3rem;
+    margin-top: 0.8rem;
+  }
+  .snippets p {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1439px) {
+  body {
+    max-width: 1440px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(210, 11%, 96%);
+    padding: 2rem;
+  }
+  footer .logo {
+    margin: 0;
+    width: 5%;
+    height: auto;
+    margin-inline: 6rem;
+  }
+  .page-links {
+    display: flex;
+    gap: 5rem;
+  }
+  .links-1,
+  .links-2,
+  .links-3 {
+    text-align: left;
+    gap: 1.2rem;
+  }
+
+  a {
+    margin-bottom: 0;
+  }
+  .snippets-container {
+    align-items: none;
+  }
+  .snippets .snippets-content {
+    width: 58% !important;
+    margin: 0 auto;
+  }
+  .snippets-left {
+    overflow: hidden;
+    width: 65%;
+  }
+  .snippets-left img {
+    /*this is to crop the image on the left*/
+    display: block;
+    width: 105%;
+    height: auto;
+    transform: translateX(-5%);
+  }
+  .snippets-right {
+    text-align: left;
+    width: 35%;
+    margin: -3rem 5rem 4rem 6rem;
+  }
+  .snippets-right h3 {
+    margin-block: 4rem 0.5rem;
+  }
+  .snippets p {
+    width: 100%;
+    margin: 0;
+  }
+}
